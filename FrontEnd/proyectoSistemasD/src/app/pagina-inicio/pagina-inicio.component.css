@@ -1,0 +1,51 @@
+.header {
+    font-family: 'Montserrat', sans-serif;
+    
+    
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    
+    background-color: brown;
+    height: 200px;
+}
+
+.titulo{
+    padding-top: 20px;
+    color: white;
+    font-size: 3em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.btnIcon {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 2rem;
+    margin-left: 4rem;
+   color: white;
+    font-size: 25px;
+    
+}
+.content{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+table {
+    width: 90%;
+    margin-bottom: 2em;
+    margin-right: 20em;
+    margin-left: 5em;
+  }
+  mat-form-field{
+    max-width: 700px;
+    width: 100%;
+  }
+
+  
+  

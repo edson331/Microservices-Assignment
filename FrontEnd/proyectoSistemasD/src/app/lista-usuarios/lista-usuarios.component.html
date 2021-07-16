@@ -1,0 +1,50 @@
+<div class="header" color='primary'>
+    <h1 class="titulo">Sistema de Compras</h1>
+    <div class="btnIcon">
+    <button class="btnIcon" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon class="icons">more_vert</mat-icon>Click
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="navegacionPaginas(1)">
+          <mat-icon>dialpad</mat-icon>
+          <span>Registrar Producto</span>
+        </button>
+        <button mat-menu-item  (click)="navegacionPaginas(2)">
+          <mat-icon>dialpad</mat-icon>
+          <span>Lista Compras</span>
+        </button>
+        <button mat-menu-item (click)="navegacionPaginas(3)">
+          <mat-icon>voicemail</mat-icon>
+          <span>Lista Usuarios</span>
+        </button>
+      </mat-menu>
+    </div>
+</div>
+<div class="content">
+<table  mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element">{{element.id}}  </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="Nombree">
+      <th mat-header-cell *matHeaderCellDef> Nombre Completo </th>
+      <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Usuario">
+      <th mat-header-cell *matHeaderCellDef> Usuario </th>
+      <td mat-cell *matCellDef="let element"> {{element.dUsuario}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

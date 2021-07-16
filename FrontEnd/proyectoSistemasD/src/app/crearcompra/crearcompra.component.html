@@ -1,0 +1,38 @@
+<div class="header" color='primary'>
+    <h1 class="titulo">Sistema de Compras</h1>
+    <div class="btnIcon">
+    <button class="btnIcon" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon class="icons">more_vert</mat-icon>Click
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="navegacionPaginas(1)">
+          <mat-icon>dialpad</mat-icon>
+          <span>Registrar Producto</span>
+        </button>
+        <button mat-menu-item  (click)="navegacionPaginas(2)">
+          <mat-icon>dialpad</mat-icon>
+          <span>Lista Compras</span>
+        </button>
+        <button mat-menu-item (click)="navegacionPaginas(3)">
+          <mat-icon>voicemail</mat-icon>
+          <span>Lista Usuarios</span>
+        </button>
+      </mat-menu>
+    </div>
+</div>
+<mat-card  >
+    <mat-card-content>
+      <form  (ngSubmit)="registrarProducto()">
+        <h2>Registrar Producto</h2>
+        <mat-form-field class="full-width-input">
+          <input matInput placeholder="Nombre" [(ngModel)]="nombre" [ngModelOptions]="{standalone: true}"  required>
+         
+        </mat-form-field>
+        <mat-form-field class="full-width-input">
+          <input matInput  placeholder="Cantidad" [(ngModel)]="cantidad"  [ngModelOptions]="{standalone: true}"    required>
+        </mat-form-field>
+        
+        <button mat-raised-button color="primary">Registrar</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
